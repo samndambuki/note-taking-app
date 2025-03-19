@@ -2,12 +2,13 @@ import "./App.css";
 //react-router-dom is used for navigation
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import AddNote from "./pages/AddNote";
 //this is the main application file
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/add" element={<Add />} /> */}
+      <Route path="/add" element={<AddNote />} />
       {/* <Route path="/edit/:id" element={<Edit />} /> */}
     </Routes>
   );

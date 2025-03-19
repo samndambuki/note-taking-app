@@ -21,10 +21,10 @@ const AddNote = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold">Add Note</h1>
+      <h1 className="text-md font-bold">Add Note</h1>
       <form onSubmit={handleSubmit} className="flex flex-col">
         <input
-          className="border p-2 mb-2"
+          className="border p-2 mb-2 rounded-lg shadow-lg text-sm"
           placeholder="Title"
           //   bind to title state
           value={title}
@@ -35,13 +35,15 @@ const AddNote = () => {
         />
         {/* allows multiple lines of text  */}
         <textarea
-          className="border p-2 mb-2"
+          className="border p-2 mb-2 rounded-lg shadow-lg text-sm"
           placeholder="Content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
           required
         />
-        <button className="bg-green-500 text-white py-2">Save</button>
+        <button className="bg-green-500 text-white py-2 text-xs rounded-lg cursor-pointer">
+          Save
+        </button>
       </form>
     </div>
   );

@@ -26,13 +26,20 @@ const Home = () => {
   }, []);
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold">Notes</h1>
-      <Link to="/add" className="bg-blue-500 text-white px-4 py-2 rounded">
+      <h1 className="text-lg font-bold mb-2">Notes</h1>
+      <Link
+        to="/add"
+        className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2 text-xs flex items-center justify-center"
+      >
         Add Note
       </Link>
+
       <ul>
         {notes.map((note) => (
-          <li key={note.id} className="border p-3 mt-2">
+          <li
+            key={note.id}
+            className="border-white p-3 mt-4 shadow-lg rounded-lg"
+          >
             <h2 className="font-semibold">{note.title}</h2>
             <p>{note.content}</p>
             <Link to={`/edit/${note.id}`} className="text-blue-500">

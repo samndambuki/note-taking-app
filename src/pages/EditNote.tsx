@@ -26,22 +26,24 @@ const EditNote = () => {
     navigate("/");
   };
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col">
+    <form onSubmit={handleSubmit} className="flex flex-col ">
       <input
-        className="border p-2 mb-2"
+        className="border p-2 mb-2 rounded-lg shadow-lg text-sm"
         placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
       />
       <textarea
-        className="border p-2 mb-2"
+        className="border p-2 mb-2 rounded-lg shadow-lg text-sm"
         placeholder="Content"
         value={content}
         onChange={(e) => setContent(e.target.value)}
         required
       />
-      <button className="bg-blue-500 text-white px-4 py-2">Update</button>
+      <button className="bg-blue-500 text-white px-4 py-2 text-xs rounded-lg cursor-pointer">
+        Update
+      </button>
     </form>
   );
 };

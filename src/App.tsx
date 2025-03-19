@@ -3,13 +3,14 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AddNote from "./pages/AddNote";
+import EditNote from "./pages/EditNote";
 //this is the main application file
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/add" element={<AddNote />} />
-      {/* <Route path="/edit/:id" element={<Edit />} /> */}
+      <Route path="/edit/:id" element={<EditNote />} />
     </Routes>
   );
 }

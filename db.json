@@ -1,0 +1,14 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "React Basics",
+      "content": "Learn about JSX,components and props"
+    },
+    {
+      "id": 2,
+      "title": "State and hooks",
+      "content": "Learn useState,useEffect and custom hooks"
+    }
+  ]
+}

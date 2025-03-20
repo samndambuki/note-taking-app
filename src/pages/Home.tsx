@@ -24,6 +24,12 @@ const Home = () => {
   useEffect(() => {
     axios.get("http://localhost:5000/notes").then((res) => setNotes(res.data));
   }, []);
+
+  const handleDelete = async (id: number) => {
+    await axios.delete(`http://localhost:5000/notes/${id}`);
+    setNotes(notes.filter((note) => note.id !== id));
+  };
+
   return (
     <div className="p-6">
       <h1 className="text-lg font-bold mb-2">Notes</h1>
@@ -45,6 +51,12 @@ const Home = () => {
             <Link to={`/edit/${note.id}`} className="text-blue-500">
               Edit
             </Link>
+            <button
+              onClick={() => handleDelete(note.id)}
+              className="text-red-500 ml-2 cursor-pointer"
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>

@@ -2,13 +2,13 @@
   "notes": [
     {
       "title": "React Basics updated",
-      "content": "Learn about JSX,components and props",
+      "content": "Learn about JSX,components and prop",
       "id": "1"
     },
     {
-      "id": "2",
       "title": "State and hooks",
-      "content": "Learn useState,useEffect and custom hooks"
+      "content": "Learn useState,useEffect and custom hooks",
+      "id": "2"
     },
     {
       "title": "test title 1 ",
